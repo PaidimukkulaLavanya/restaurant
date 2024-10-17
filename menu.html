@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Unlimited Multi-Cuisine Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: white;
+            color: white;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 60px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 2.5em; /* Increased font size for navigation links */
+        }
+
+        h1 {
+            font-size: 5em; /* Increased font size for the main header */
+            margin: 0; /* Remove default margin */
+        }
+
+        .container {
+            padding: 40px; /* Adjusted padding for the container */
+            text-align: center;
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjusted minimum column width */
+            gap: 20px;
+            justify-items: center; /* Center the items */
+        }
+
+        .menu-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px; /* Adjusted width for menu items */
+        }
+
+        .menu-item img {
+            width: 120%;  /* Increased width to 120% of the menu item */
+            height: auto; /* Keep height auto for aspect ratio */
+            border-radius: 5px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Increase shadow depth */
+            transition: transform 0.3s; /* Add transition effect for scaling */
+            max-width: none; /* Prevent images from being constrained */
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.05); /* Scale down slightly on hover */
+        }
+
+        .menu-item h3 {
+            margin: 10px 0;
+            font-size: 2em; /* Adjusted font size for dish names */
+            color: #000; /* Change color to black for visibility */
+        }
+
+        .menu-item p {
+            font-size: 2em; /* Adjusted font size for prices */
+            color: #d67c0f; /* Keeping yellow color for prices */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unlimited Multi-Cuisine Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="images/image6.jpg" alt="Butter Chicken">
+                <h3>Butter Chicken</h3>
+                <p>₹250</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image7.jpg" alt="Paneer Butter Masala">
+                <h3>Paneer Butter Masala</h3>
+                <p>₹220</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image8.jpg" alt="Biryani">
+                <h3>Biryani</h3>
+                <p>₹180</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image9.jpg" alt="Naan">
+                <h3>Naan</h3>
+                <p>₹50</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image10.jpg" alt="Gulab Jamun">
+                <h3>Gulab Jamun</h3>
+                <p>₹80</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image11.jpg" alt="Chole Bhature">
+                <h3>Chole Bhature</h3>
+                <p>₹150</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image12.jpg" alt="Tandoori Chicken">
+                <h3>Tandoori Chicken</h3>
+                <p>₹280</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image13.jpg" alt="Veg Pulao">
+                <h3>Veg Pulao</h3>
+                <p>₹120</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image14.jpg" alt="Masala Dosa">
+                <h3>Masala Dosa</h3>
+                <p>₹100</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image15.jpg" alt="Lassi">
+                <h3>Lassi</h3>
+                <p>₹60</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image16.jpg" alt="Chicken Tikka">
+                <h3>Chicken Tikka</h3>
+                <p>₹300</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image17.jpg" alt="Fish Curry">
+                <h3>Fish Curry</h3>
+                <p>₹320</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image18.jpg" alt="Rajma Chawal">
+                <h3>Rajma Chawal</h3>
+                <p>₹130</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image19.jpg" alt="Dal Makhani">
+                <h3>Dal Makhani</h3>
+                <p>₹180</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image20.jpg" alt="Aloo Paratha">
+                <h3>Aloo Paratha</h3>
+                <p>₹90</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image21.jpg" alt="Mutton Rogan Josh">
+                <h3>Mutton Rogan Josh</h3>
+                <p>₹350</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image22.jpg" alt="Palak Paneer">
+                <h3>Palak Paneer</h3>
+                <p>₹200</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image23.jpg" alt="Chicken 65">
+                <h3>Chicken 65</h3>
+                <p>₹260</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image24.jpg" alt="Raita">
+                <h3>Raita</h3>
+                <p>₹50</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image25.jpg" alt="Rasmalai">
+                <h3>Rasmalai</h3>
+                <p>₹100</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/image26.jpg" alt="Kolkata Biryani">
+                <h3>Kolkata Biryani</h3>
+                <p>₹340</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact Us: 123-456-7890</p>
+        <p>&copy; 2024 Unlimited Multi-Cuisine Restaurant</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Unlimited Multi-Cuisine Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 60px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 2.5em;
+        }
+
+        h1 {
+            font-size: 5em;
+            margin: 0;
+        }
+
+        .container {
+            padding: 80px;
+            text-align: center;
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .featured-dishes, .special-offers {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .dish, .offer {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish img, .offer img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unlimited Multi-Cuisine Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Welcome to Our Restaurant!</h2>
+        <p>Experience the best multi-cuisine dishes from around the world.</p>
+
+        <h2>Featured Dishes</h2>
+        <div class="featured-dishes">
+            <div class="dish">
+                <img src="images\image1.jpg" alt="Spicy Paneer Tikka">
+                <h3>Spicy Paneer Tikka</h3>
+                <p>Marinated paneer cubes grilled to perfection.</p>
+            </div>
+            <div class="dish">
+                <img src="images\image2.jpg" alt="Vegetable Biryani">
+                <h3>Vegetable Biryani</h3>
+                <p>Aromatic basmati rice with mixed vegetables.</p>
+            </div>
+            <div class="dish">
+                <img src="images\image3.jpg" alt="Chicken Curry">
+                <h3>Chicken Curry</h3>
+                <p>Succulent chicken pieces cooked in a rich gravy.</p>
+            </div>
+        </div>
+
+        <h2>Special Offers</h2>
+        <div class="special-offers">
+            <div class="offer">
+                <img src="images\image4.jpg" alt="Offer 1">
+                <h3>Buy 1 Get 1 Free!</h3>
+                <p>On all appetizers every Friday.</p>
+            </div>
+            <div class="offer">
+                <img src="images\image5.jpg" alt="Offer 2">
+                <h3>20% Off</h3>
+                <p>On your first online order.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Unlimited Multi-Cuisine Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>
