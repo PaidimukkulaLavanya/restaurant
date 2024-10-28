@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Reviews</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Customer Reviews - DINEVIBE</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-
         header {
             background-color: #333;
-            color: white;
+            color: #fff;
             padding: 60px 0;
             text-align: center;
         }
-
         nav ul {
             list-style-type: none;
             padding: 0;
         }
-
         nav ul li {
             display: inline;
-            margin: 0 60px;
+            margin-right: 60px;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 2.5em;
         }
-
-        main {
-            flex: 1;
+        h1 {
+            font-size: 5em;
+            margin: 0;
+        }
+        .container {
             padding: 80px;
             text-align: center;
+            flex: 1;
         }
-
         h2 {
             font-size: 4em;
         }
-
+        p {
+            font-size: 3em; 
+            line-height: 1.5; 
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        footer p {
+            font-size: 2em;
+        }
         .review {
             margin: 40px 0;
             font-size: 2em;
@@ -56,39 +64,75 @@
             border: 1px solid #ddd;
             background-color: #fff;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        footer {
-            background-color: #333;
+        .review-form {
+            margin: 20px auto; 
+            font-size: 1.5em; 
+            max-width: 600px; 
+            text-align: center; 
+        }
+        .review-form input,
+        .review-form textarea {
+            width: calc(100% - 20px);
+            padding: 15px; 
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1.5em; 
+        }
+        .review-form textarea {
+            height: 100px; 
+        }
+        .review-form button {
+            padding: 15px 30px; 
+            font-size: 1.5em; 
+            background-color: #d67c0f;
             color: white;
-            text-align: center;
-            padding: 30px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; 
         }
-
-        footer p {
-            font-size: 2em;
+        .review-form button:hover {
+            background-color: #c86a0f; 
+        }
+        .review-image {
+            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Unlimited Multi-Cuisine Restaurant</h1>
+        <h1>DINEVIBE</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="reservations.html">Reservations</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="location.html">Location</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="reviews">
-            <h2>Customer Reviews</h2>
+    <div class="container">
+        <h2>Customer Reviews</h2>
+
+        <div class="review-form">
+            <h3>Leave a Review</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="reviewText" rows="4" placeholder="Your Review" required></textarea>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+
+        <div id="reviewList">
             <div class="review">
                 <h3>John Doe</h3>
                 <p>"The food was absolutely delicious! The ambiance is great, and the service was excellent."</p>
@@ -105,12 +149,48 @@
                 <h3>Michael Brown</h3>
                 <p>"The best restaurant in town! Friendly staff and a cozy atmosphere. Will definitely come back!"</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Unlimited Multi-Cuisine Restaurant. All rights reserved.</p>
-        <p>Follow us on social media!</p>
+        <p>&copy; 2024 DINEVIBE. All rights reserved.</p>
     </footer>
+
+    <script>
+        function submitReview() {
+            const name = document.getElementById('name').value;
+            const reviewText = document.getElementById('reviewText').value;
+            const imageUpload = document.getElementById('imageUpload').files[0];
+
+            if (name && reviewText) {
+                const reviewList = document.getElementById('reviewList');
+                const newReview = document.createElement('div');
+                newReview.classList.add('review');
+
+                const imageElement = imageUpload ? document.createElement('img') : null;
+                if (imageElement) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imageElement.src = e.target.result;
+                        imageElement.classList.add('review-image');
+                        newReview.appendChild(imageElement);
+                    };
+                    reader.readAsDataURL(imageUpload);
+                }
+
+                newReview.innerHTML += `
+                    <h3>${name}</h3>
+                    <p>"${reviewText}"</p>
+                `;
+
+                reviewList.prepend(newReview);
+                document.getElementById('name').value = '';
+                document.getElementById('reviewText').value = '';
+                document.getElementById('imageUpload').value = '';
+            } else {
+                alert("Please fill out both fields.");
+            }
+        }
+    </script>
 </body>
 </html>
