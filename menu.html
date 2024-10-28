@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Unlimited Multi-Cuisine Restaurant</title>
+    <title>Menu - DINEVIBE</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
             flex-direction: column;
             min-height: 100vh;
             background-color: white;
-            color: white;
+            color: #000;
         }
         
         header {
@@ -36,62 +36,68 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 2.5em; 
+            font-size: 2.5em;
         }
 
         h1 {
-            font-size: 5em; 
-            margin: 0; 
+            font-size: 5em;
+            margin: 0;
         }
 
         .container {
-            padding: 40px; 
-            text-align: center;
+            padding: 40px;
             flex: 1;
         }
 
         h2 {
             font-size: 4em;
             margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .category {
+            margin: 40px 0;
+            text-align: center;
         }
 
         .menu-items {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
             justify-items: center;
         }
 
         .menu-item {
-            background-color: white;
+            background-color: #f9f9f9;
             padding: 15px;
             border-radius: 10px;
             text-align: center;
-            width: 350px; 
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
         }
 
         .menu-item img {
-            width: 120%;  
-            height: auto; 
-            border-radius: 5px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
-            transition: transform 0.3s; 
-            max-width: none; 
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #d67c0f;
         }
 
-        .menu-item:hover img {
+        .menu-item:hover {
             transform: scale(1.05);
         }
 
         .menu-item h3 {
             margin: 10px 0;
-            font-size: 2em; 
-            color: #000; 
+            font-size: 2em;
+            color: #333;
         }
 
         .menu-item p {
-            font-size: 2em; 
-            color: #d67c0f; 
+            font-size: 2em;
+            color: #d67c0f;
         }
 
         footer {
@@ -108,7 +114,7 @@
 </head>
 <body>
     <header>
-        <h1>Unlimited Multi-Cuisine Restaurant</h1>
+        <h1>DINEVIBE</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -124,118 +130,193 @@
 
     <div class="container">
         <h2>Our Menu</h2>
-        <div class="menu-items">
-            <div class="menu-item">
-                <img src="images/image6.jpg" alt="Butter Chicken">
-                <h3>Butter Chicken</h3>
-                <p>₹250</p>
+
+        <div class="category">
+            <h2>Starters</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/image6.jpg" alt="Butter Chicken">
+                    <h3>Butter Chicken</h3>
+                    <p>₹250</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image7.jpg" alt="Paneer Butter Masala">
+                    <h3>Paneer Butter Masala</h3>
+                    <p>₹220</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image9.jpg" alt="Naan">
+                    <h3>Naan</h3>
+                    <p>₹50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image10.jpg" alt="Gulab Jamun">
+                    <h3>Gulab Jamun</h3>
+                    <p>₹80</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image6.jpg" alt="Spring Rolls">
+                    <h3>Spring Rolls</h3>
+                    <p>₹120</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image7.jpg" alt="Veg Pakora">
+                    <h3>Veg Pakora</h3>
+                    <p>₹100</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image9.jpg" alt="Hummus">
+                    <h3>Hummus</h3>
+                    <p>₹150</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image31.jpg" alt="Stuffed Mushrooms">
+                    <h3>Stuffed Mushrooms</h3>
+                    <p>₹200</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image32.jpg" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p>₹130</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image33.jpg" alt="Caprese Salad">
+                    <h3>Caprese Salad</h3>
+                    <p>₹180</p>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="images/image7.jpg" alt="Paneer Butter Masala">
-                <h3>Paneer Butter Masala</h3>
-                <p>₹220</p>
+        </div>
+
+        <div class="category">
+            <h2>Main Course</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/image8.jpg" alt="Biryani">
+                    <h3>Biryani</h3>
+                    <p>₹180</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image11.jpg" alt="Chole Bhature">
+                    <h3>Chole Bhature</h3>
+                    <p>₹150</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image12.jpg" alt="Tandoori Chicken">
+                    <h3>Tandoori Chicken</h3>
+                    <p>₹280</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image13.jpg" alt="Veg Pulao">
+                    <h3>Veg Pulao</h3>
+                    <p>₹120</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image16.jpg" alt="Chicken Tikka">
+                    <h3>Chicken Tikka</h3>
+                    <p>₹300</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image17.jpg" alt="Fish Curry">
+                    <h3>Fish Curry</h3>
+                    <p>₹320</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image18.jpg" alt="Rajma Chawal">
+                    <h3>Rajma Chawal</h3>
+                    <p>₹130</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image19.jpg" alt="Dal Makhani">
+                    <h3>Dal Makhani</h3>
+                    <p>₹180</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image21.jpg" alt="Mutton Rogan Josh">
+                    <h3>Mutton Rogan Josh</h3>
+                    <p>₹350</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image22.jpg" alt="Palak Paneer">
+                    <h3>Palak Paneer</h3>
+                    <p>₹200</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image34.jpg" alt="Pav Bhaji">
+                    <h3>Pav Bhaji</h3>
+                    <p>₹180</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image22.jpg" alt="Paneer Tikka">
+                    <h3>Paneer Tikka</h3>
+                    <p>₹220</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image23.jpg" alt="Kadhai Chicken">
+                    <h3>Kadhai Chicken</h3>
+                    <p>₹300</p>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="images/image8.jpg" alt="Biryani">
-                <h3>Biryani</h3>
-                <p>₹180</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image9.jpg" alt="Naan">
-                <h3>Naan</h3>
-                <p>₹50</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image10.jpg" alt="Gulab Jamun">
-                <h3>Gulab Jamun</h3>
-                <p>₹80</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image11.jpg" alt="Chole Bhature">
-                <h3>Chole Bhature</h3>
-                <p>₹150</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image12.jpg" alt="Tandoori Chicken">
-                <h3>Tandoori Chicken</h3>
-                <p>₹280</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image13.jpg" alt="Veg Pulao">
-                <h3>Veg Pulao</h3>
-                <p>₹120</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image14.jpg" alt="Masala Dosa">
-                <h3>Masala Dosa</h3>
-                <p>₹100</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image15.jpg" alt="Lassi">
-                <h3>Lassi</h3>
-                <p>₹60</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image16.jpg" alt="Chicken Tikka">
-                <h3>Chicken Tikka</h3>
-                <p>₹300</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image17.jpg" alt="Fish Curry">
-                <h3>Fish Curry</h3>
-                <p>₹320</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image18.jpg" alt="Rajma Chawal">
-                <h3>Rajma Chawal</h3>
-                <p>₹130</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image19.jpg" alt="Dal Makhani">
-                <h3>Dal Makhani</h3>
-                <p>₹180</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image20.jpg" alt="Aloo Paratha">
-                <h3>Aloo Paratha</h3>
-                <p>₹90</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image21.jpg" alt="Mutton Rogan Josh">
-                <h3>Mutton Rogan Josh</h3>
-                <p>₹350</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image22.jpg" alt="Palak Paneer">
-                <h3>Palak Paneer</h3>
-                <p>₹200</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image23.jpg" alt="Chicken 65">
-                <h3>Chicken 65</h3>
-                <p>₹260</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image24.jpg" alt="Raita">
-                <h3>Raita</h3>
-                <p>₹50</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image25.jpg" alt="Rasmalai">
-                <h3>Rasmalai</h3>
-                <p>₹100</p>
-            </div>
-            <div class="menu-item">
-                <img src="images/image26.jpg" alt="Kolkata Biryani">
-                <h3>Kolkata Biryani</h3>
-                <p>₹340</p>
+        </div>
+
+        <div class="category">
+            <h2>Desserts</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/image35.jpg" alt="Chocolate Lava Cake">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>₹200</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image36.jpg" alt="Cheesecake">
+                    <h3>Cheesecake</h3>
+                    <p>₹250</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image37.jpg" alt="Tiramisu">
+                    <h3>Tiramisu</h3>
+                    <p>₹300</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/image38.jpg" alt="Fruit Salad">
+                    <h3>Fruit Salad</h3>
+                    <p>₹150</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images\image39.jpg" alt="Brownie">
+                    <h3>Brownie</h3>
+                    <p>₹180</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images\image40.jpg" alt="Panna Cotta">
+                    <h3>Panna Cotta</h3>
+                    <p>₹220</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images\image41.jpg" alt="Lemon Tart">
+                    <h3>Lemon Tart</h3>
+                    <p>₹200</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images\image42.jpg" alt="Rice Pudding">
+                    <h3>Rice Pudding</h3>
+                    <p>₹160</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images\image43.jpg" alt="Baklava">
+                    <h3>Baklava</h3>
+                    <p>₹220</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images\image44.jpg" alt="Mango Mousse">
+                    <h3>Mango Mousse</h3>
+                    <p>₹240</p>
+                </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Contact Us: 123-456-7890</p>
-        <p>&copy; 2024 Unlimited Multi-Cuisine Restaurant</p>
+        <p>© 2024 DINEVIBE. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
